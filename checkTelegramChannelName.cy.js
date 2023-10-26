@@ -12,14 +12,12 @@ describe('Contact Information Test', () => {
     .invoke('attr', 'href')
     .then(href => {
       cy.visit(href)
-    })
 
-    
-    cy.origin('byndyusoft.com', () => {
-      
-    cy.get("body > section.knowMore > div > span").click()
-    cy.get(".popup-callback__contacts-tg").should('have.attr', 'href', 'https://t.me/alexanderbyndyu')
-      
-  })
+      cy.origin(href, () => {
+        cy.get("body > section.knowMore > div > span").click()
+        cy.get(".popup-callback__contacts-tg").should('have.attr', 'href', 'https://t.me/alexanderbyndyu')
+      })
+    })
+  
   })
 })
