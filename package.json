@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "cypress": "^13.3.2"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^3.0.1"
+  },
+"browserslist":"defaults",
+"cypress:open": "yarn run cypress open",
+"cypress:legacy": "NODE_OPTIONS=--openssl-legacy-provider && yarn cypress:open"
+}
